@@ -56,10 +56,31 @@
     <!-- YouTube Embed Yayın -->
     <div class="video-section">
       <iframe 
-        src="https://www.youtube.com/embed/pgHVYfneu38?autoplay=1&mute=1"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+  id="ytplayer"
+  width="100%" 
+  height="480"
+  src="https://www.youtube.com/embed/gSBZcx5YbH4?enablejsapi=1"
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
+
+<script>
+  function onYouTubeIframeAPIReady() {
+    const player = new YT.Player('ytplayer', {
+      events: {
+        'onReady': function (event) {
+          event.target.setVolume(100);
+          event.target.playVideo();
+        }
+      }
+    });
+  }
+
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+</script>
     </div>
 
     <!-- Chatango Embed -->
