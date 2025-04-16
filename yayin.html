@@ -37,10 +37,10 @@
       border: none;
     }
 
-    /* Mobil görünüm */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        height: auto;
       }
 
       .video-section,
@@ -53,33 +53,24 @@
 <body>
 
   <div class="container">
-    <!-- Yayın Bölümü -->
+    <!-- YouTube Embed Yayın -->
     <div class="video-section">
-      <iframe
-  <iframe
-  width="100%"
-  height="480"
-  src="https://www.youtube.com/embed/gSBZcx5YbH4?autoplay=1"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
-</iframe>
-</iframe>
-<!-- SESLİ KONUŞMA RADYO BLOĞU -->
-<section style="margin-top: 40px; padding: 30px; background: #111; color: white; text-align: center; border-radius: 12px; max-width: 900px; margin-left: auto; margin-right: auto;">
-  <h2 style="font-size: 2.5em; color: #00ffcc; margin-bottom: 20px;">🎙️ FUAT SOHBET ODASI</h2>
-  <p style="font-size: 1.2em; color: #ccc; margin-bottom: 30px;">Mikrofonla katıl, diğer izleyicilerle anlık konuş!</p>
+      <iframe 
+        src="https://www.youtube.com/embed/pgHVYfneu38?autoplay=1&mute=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-  <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden;">
-    <iframe
-      src="https://huddle01.com/room/fuatsohbet"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-      allow="microphone; camera; fullscreen"
-      allowfullscreen>
-    </iframe>
+    <!-- Chatango Embed -->
+    <div class="chat-section">
+      <script id="cid0020000405792876282" data-cfasync="false" async 
+        src="//fuatsports.chatango.com/js/gz/emb.js" 
+        style="width: 100%; height: 100%;">
+        {"handle":"fuatsports","arch":"js","styles":{"a":"000099","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000099","l":"000099","m":"000099","n":"FFFFFF","p":"10","q":"000099","r":100,"cnrs":"0.35","fwtickm":1}}
+      </script>
+    </div>
   </div>
-</section>
-</section>
-</iframe>
+
 </body>
 </html>
