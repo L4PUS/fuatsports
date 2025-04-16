@@ -4,18 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FuatSports Canlı Yayın</title>
-  <script>
-  fetch('https://api.ipify.org?format=json')
-    .then(res => res.json())
-    .then(data => {
-      const yasakliIP = ['176.219.56.142']; // ← Buraya engellemek istediğin IP’yi yaz
-
-      if (yasakliIP.includes(data.ip)) {
-        // Siteyi gizle ve engellendi mesajı göster
-        document.body.innerHTML = "<div style='color: red; text-align: center; padding-top: 100px; font-size: 1.5em;'>Erişiminiz bu siteye engellenmiştir. 🙅‍♂️</div>";
-      }
-    });
-</script>
   <style>
     body {
       margin: 0;
