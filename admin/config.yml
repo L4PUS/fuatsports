@@ -1,21 +1,17 @@
-# admin/config.yml
-
 backend:
   name: git-gateway
-  branch: main        # GitHub repo’da kullandığın ana dal
+  branch: main
 
-media_folder: "images"          # CMS’e yüklenen görseller burada saklanacak
-public_folder: "/images"        # Site içinden erişilen yol
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "posts"               # koleksiyonun programatik adı
-    label: "Blog Yazıları"      # CMS arayüzündeki adı
-    folder: "yazilar"           # içerik dosyalarının bulunduğu klasör
-    create: true                # yeni dosya oluşturmayı aç
-    slug: "{{slug}}"            # dosya adı şablonu, örn: gs-fener.html
+  - name: "posts"
+    label: "Blog Yazıları"
+    folder: "yazilar"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
-      - { label: "Tarih",    name: "date",  widget: "datetime", format: "DD MMMM YYYY" }
-      - { label: "Ön İzleme",name: "excerpt", widget: "text", required: false }
-      - { label: "Görsel",   name: "image", widget: "image", required: false }
-      - { label: "İçerik",   name: "body",  widget: "html" }
+      - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
