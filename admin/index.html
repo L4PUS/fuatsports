@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <title>FuatSports Admin Panel</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <!-- CMS Panelinin yüklenmesi gereken div -->
+    <div id="nc-root"></div>
+
+    <!-- Netlify CMS yükleyici script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js";
+        document.body.appendChild(script);
+      });
+    </script>
   </body>
 </html>
